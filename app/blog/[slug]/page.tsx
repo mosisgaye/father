@@ -3,7 +3,6 @@ import path from 'path';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
-import '@/app/globals.css';
 
 interface PostPageProps {
   params: { slug: string };
@@ -27,6 +26,7 @@ export default async function PostPage({ params: { slug } }: PostPageProps) {
 
   return (
     <div>
+      {/* Afficher l'image de couverture comme une bannière */}
       {frontmatter.coverImage && (
         <div className="relative w-full h-64 overflow-hidden">
           <Image

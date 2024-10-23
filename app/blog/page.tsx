@@ -1,25 +1,24 @@
+import React from 'react';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FC } from 'react'; // Import de FC pour typer la fonction
 
-// Assure-toi que la page est bien dynamique
-export const dynamic = 'force-dynamic';
 
-// Interface pour les props de BlogPage
+// Interface voor de props definiëren
 interface BlogPageProps {
-  limit?: number;
+  limit?: number; // De 'limit' prop is optioneel
 }
 
-// Composant fonctionnel pour afficher la page du blog
-const BlogPage: FC<BlogPageProps> = async ({ limit }) => {
-  // Récupération des fichiers markdown
+export default function BlogPage({ limit }: BlogPageProps) {
+  // Gebruik van process.cwd() om ervoor te zorgen dat het pad correct is
   const files = fs.readdirSync(path.join(process.cwd(), 'posts'));
 
-  // Lecture des fichiers et extraction des métadonnées
-  const posts = files.map((fileName) => {
+  // Pas de limiet toe als deze is ingesteld
+  const limitedFiles = limit ? files.slice(0, limit) : files;
+
+  const posts = limitedFiles.map((fileName) => {
     const slug = fileName.replace('.md', '');
     const markdownWithMeta = fs.readFileSync(
       path.join(process.cwd(), 'posts', fileName),
@@ -33,17 +32,15 @@ const BlogPage: FC<BlogPageProps> = async ({ limit }) => {
     };
   });
 
-  // Applique la limite si elle est définie
-  const limitedPosts = limit ? posts.slice(0, limit) : posts;
-
   return (
     <div>
-      <div className="max-w-7xl mx-auto py-16 px-6 bg-[#e0dbd4] rounded-lg shadow-lg">
+    
+      <div className="max-w-7xl mx-auto py-16 px-6 bg-gray-50 rounded-lg shadow-lg">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-800">
           Onze tips voor het succesvol afronden van je afstandsonderwijs
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {limitedPosts.map(({ slug, frontmatter }) => (
+          {posts.map(({ slug, frontmatter }) => (
             <div
               key={slug}
               className="bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105"
@@ -76,7 +73,7 @@ const BlogPage: FC<BlogPageProps> = async ({ limit }) => {
         {limit && (
           <div className="flex justify-center mt-12">
             <Link href="/blog">
-              <button className="bg-[#0065de] text-white px-8 py-4 rounded-full hover:bg-blue-800 transition-all duration-300">
+              <button className="bg-pink-600 text-white px-8 py-4 rounded-full hover:bg-pink-700 transition-all duration-300">
                 Alle artikelen bekijken
               </button>
             </Link>
@@ -85,6 +82,4 @@ const BlogPage: FC<BlogPageProps> = async ({ limit }) => {
       </div>
     </div>
   );
-};
-
-export default BlogPage;
+}
