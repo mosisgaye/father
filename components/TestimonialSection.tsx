@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const testimonials = [
   {
@@ -10,6 +10,10 @@ const testimonials = [
   {
     text: "I transformed my mindset and now I achieve everything I set my mind to.",
     name: "Mary Smith",
+  },
+  {
+    text: "I turned my dreams into reality, one step at a time.",
+    name: "Emma Brown",
   },
 ];
 
@@ -27,6 +31,17 @@ export default function TestimonialSection() {
       prev === testimonials.length - 1 ? 0 : prev + 1
     );
   };
+
+  // Défilement automatique des témoignages
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) =>
+        prev === testimonials.length - 1 ? 0 : prev + 1
+      );
+    }, 5000); // Changez la durée ici (en millisecondes)
+
+    return () => clearInterval(interval); // Nettoie l'intervalle à la désactivation du composant
+  }, []);
 
   return (
     <div className="bg-[#e0dbd4] flex flex-col items-center py-10 px-4">

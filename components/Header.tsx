@@ -15,13 +15,7 @@ export default function Header() {
       {/* Logo */}
       <div className="flex items-center px-10">
         <Link href="/" aria-label="Retourner à l'accueil ComparePrix">
-          <Image 
-            className="w-[100px] h-auto md:w-[124px] md:h-auto" 
-            width={124} 
-            height={100} 
-            src="/images/logo.png" 
-            alt="Logo vaderhart" 
-          />
+          <Image className="md:w-[124px] md:h-[77px]" width={124} height={100} src="/images/logo.png" alt="Logo vaderhart" />
         </Link>
       </div>
 
@@ -30,9 +24,9 @@ export default function Header() {
         <Link href="/" className="py-2 hover:text-[#663d2e] font-medium">HOME</Link>
         <Link href="/about" className="py-2 hover:text-[#663d2e] font-medium">ABOUT</Link>
         <Link href="/services" className="py-2 hover:text-[#663d2e] font-medium">SERVICES</Link>
-        <Link href="/speaking" className="py-2 hover:text-[#663d2e] font-medium">FAQ</Link>
+        <Link href="/speaking" className="py-2 hover:text-[#663d2e] font-medium">SPEAKING</Link>
         <Link href="/blog" className="py-2 hover:text-[#663d2e] font-medium">BLOG</Link>
-        <Link href="/contact" className="py-2 hover:text-[#663d2e] font-medium">CONTACT</Link>
+        <Link href="/membership" className="py-2 hover:text-[#663d2e] font-medium">MEMBERSHIP</Link>
       </div>
 
       {/* Hamburger Menu for mobile */}
@@ -50,7 +44,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 left-0 w-full h-full bg-[#e0dbd4] text-black transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 w-full h-full bg-[#012737] text-white transform transition-transform duration-300 ease-in-out ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         } z-40 overflow-hidden`}
       >
@@ -66,13 +60,13 @@ export default function Header() {
             </button>
           </div>
 
-          <nav className="mt-10 flex flex-col space-y-6 text-center">
+          <nav className="mt-10 flex flex-col space-y-4 text-center">
             <Link href="/" className="py-2 hover:text-[#663d2e] font-medium">HOME</Link>
             <Link href="/about" className="py-2 hover:text-[#663d2e] font-medium">ABOUT</Link>
             <Link href="/services" className="py-2 hover:text-[#663d2e] font-medium">SERVICES</Link>
-            <Link href="/speaking" className="py-2 hover:text-[#663d2e] font-medium">FAQ</Link>
+            <Link href="/speaking" className="py-2 hover:text-[#663d2e] font-medium">SPEAKING</Link>
             <Link href="/blog" className="py-2 hover:text-[#663d2e] font-medium">BLOG</Link>
-            <Link href="/contact" className="py-2 hover:text-[#663d2e] font-medium">CONTACT</Link>
+            <Link href="/membership" className="py-2 hover:text-[#663d2e] font-medium">MEMBERSHIP</Link>
           </nav>
         </div>
       </div>
