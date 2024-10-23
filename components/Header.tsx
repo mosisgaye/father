@@ -11,11 +11,11 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-[#e0dbd4] text-black px-4 h-12 md:px-10 md:h-20 flex items-center justify-between">
+    <header className="top-0 z-50 bg-[#e0dbd4] text-black px-4 h-12 md:px-10 md:h-20 flex items-center justify-between">
       {/* Logo */}
-      <div className="flex items-center px-10">
+      <div className="flex items-center">
         <Link href="/" aria-label="Retourner à l'accueil ComparePrix">
-          <Image className="md:w-[124px] md:h-[77px]" width={124} height={100} src="/images/logo.png" alt="Logo vaderhart" />
+          <Image className="md:w-[124px] md:h-[77px] w-[80px] h-[50px]" width={124} height={100} src="/images/logo.png" alt="Logo vaderhart" />
         </Link>
       </div>
 
@@ -26,7 +26,7 @@ export default function Header() {
         <Link href="/services" className="py-2 hover:text-[#663d2e] font-medium">SERVICES</Link>
         <Link href="/speaking" className="py-2 hover:text-[#663d2e] font-medium">SPEAKING</Link>
         <Link href="/blog" className="py-2 hover:text-[#663d2e] font-medium">BLOG</Link>
-        <Link href="/membership" className="py-2 hover:text-[#663d2e] font-medium">MEMBERSHIP</Link>
+        <Link href="/membership" className="py-2 hover:text-[#663d2e] font-medium">CONTACT</Link>
       </div>
 
       {/* Hamburger Menu for mobile */}
@@ -66,7 +66,7 @@ export default function Header() {
             <Link href="/services" className="py-2 hover:text-[#663d2e] font-medium">SERVICES</Link>
             <Link href="/speaking" className="py-2 hover:text-[#663d2e] font-medium">SPEAKING</Link>
             <Link href="/blog" className="py-2 hover:text-[#663d2e] font-medium">BLOG</Link>
-            <Link href="/membership" className="py-2 hover:text-[#663d2e] font-medium">MEMBERSHIP</Link>
+            <Link href="/membership" className="py-2 hover:text-[#663d2e] font-medium">CONTACT</Link>
           </nav>
         </div>
       </div>
