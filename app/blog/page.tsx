@@ -3,13 +3,18 @@ import path from 'path';
 import matter from 'gray-matter';
 import Link from 'next/link';
 import Image from 'next/image';
+import { FC } from 'react'; // Import de FC pour typer la fonction
 
-export const dynamic = 'force-dynamic'; 
+// Assure-toi que la page est bien dynamique
+export const dynamic = 'force-dynamic';
+
+// Interface pour les props de BlogPage
 interface BlogPageProps {
   limit?: number;
 }
 
-export default async function BlogPage({ limit }: BlogPageProps) {
+// Composant fonctionnel pour afficher la page du blog
+const BlogPage: FC<BlogPageProps> = async ({ limit }) => {
   // Récupération des fichiers markdown
   const files = fs.readdirSync(path.join(process.cwd(), 'posts'));
 
@@ -80,4 +85,6 @@ export default async function BlogPage({ limit }: BlogPageProps) {
       </div>
     </div>
   );
-}
+};
+
+export default BlogPage;
