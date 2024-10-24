@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 function AboutSection() {
   return (
-    <section className="bg-[#F5F5DC] py-16 flex flex-col items-center justify-center">
+    <section className="bg-[#ffffff] py-16 flex flex-col items-center justify-center">
       <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-start justify-between">
           {/* Texte à gauche */}
