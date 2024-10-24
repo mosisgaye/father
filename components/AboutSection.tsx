@@ -2,27 +2,40 @@ import Image from 'next/image';
 
 function AboutSection() {
   return (
-    <section className="bg-white py-16 flex flex-col items-center justify-center">
+    <section className="bg-[#F5F5DC] py-16 flex flex-col items-center justify-center">
       <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-start justify-between">
           {/* Texte à gauche */}
           <div className="md:w-3/5 mb-8 md:mb-0"> {/* Reduced width */}
             <h2 className="text-3xl font-bold mb-4 text-left text-[#5f3b2f] uppercase">
-              I'm a Certified Confidence Coach, US Army Veteran, and Audacity Activator
+              Lorem Ipsum Dolor Sit Amet
             </h2>
             {/* Horizontal line with exact thickness and color */}
             <hr className="border-t-4 border-[#b5885c] w-24 mb-6" />
             <p className="text-xl mb-6 text-left text-gray-700 leading-relaxed">
-              I help world-changing women walk boldly in their power and show up fully expressed in all areas of their lives!
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
             </p>
             <p className="text-xl mb-6 text-left text-gray-700 leading-relaxed">
-              My life experiences have shown me that no matter what you have been through, with just a few strokes of the paintbrush, you can create a brand-new masterpiece.
+              Fusce ac nisi eu magna tincidunt fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
             </p>
             <p className="text-xl text-left text-gray-700 leading-relaxed">
-              These days you can find me spending quality time with my family, engaging in daily self-care, reading a good book, taking long walks, and having glorious do-nothing time; but my life wasn't always this way.
+              Donec quis purus nec nisi tincidunt consectetur ut nec lectus. Proin venenatis mi at libero interdum, a consequat tortor scelerisque.
             </p>
             <p className="text-xl text-left text-gray-700 leading-relaxed">
-              These days you can find me spending quality time with my family, engaging in daily self-care, reading a good book, taking long walks, and having glorious do-nothing time; but my life wasn't always this way.
+              Aliquam erat volutpat. Vivamus nec neque sit amet magna sagittis euismod. Integer sit amet turpis et augue vehicula dignissim.
+            </p>
+
+            <p className="text-xl mb-6 text-left text-gray-700 leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
+            </p>
+            <p className="text-xl mb-6 text-left text-gray-700 leading-relaxed">
+              Fusce ac nisi eu magna tincidunt fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
+            </p>
+            <p className="text-xl text-left text-gray-700 leading-relaxed">
+              Donec quis purus nec nisi tincidunt consectetur ut nec lectus. Proin venenatis mi at libero interdum, a consequat tortor scelerisque.
+            </p>
+            <p className="text-xl text-left text-gray-700 leading-relaxed">
+              Aliquam erat volutpat. Vivamus nec neque sit amet magna sagittis euismod. Integer sit amet turpis et augue vehicula dignissim.
             </p>
           </div>
           

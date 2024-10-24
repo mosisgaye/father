@@ -44,7 +44,7 @@ export default function TestimonialSection() {
   }, []);
 
   return (
-    <div className="bg-[#e0dbd4] flex flex-col items-center py-10 px-4">
+    <div className="bg-[#f5deb3] flex flex-col items-center py-10 px-4">
       <div className="relative max-w-4xl text-center">
         <p className="text-[#AA2C2C] uppercase tracking-wider text-sm mb-4">
           So I Became Her...

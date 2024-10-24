@@ -11,7 +11,7 @@ export default function Header() {
   };
 
   return (
-    <header className="top-0 z-50 bg-[#e0dbd4] text-black px-4 h-12 md:px-10 md:h-20 flex items-center justify-between">
+    <header className="top-0 z-50 bg-[#F5DEB3] text-black px-4 h-12 md:px-10 md:h-20 flex items-center justify-between">
       {/* Logo */}
       <div className="flex items-center">
         <Link href="/" aria-label="Retourner à l'accueil ComparePrix">
@@ -20,13 +20,27 @@ export default function Header() {
       </div>
 
       {/* Navigation Links for desktop */}
-      <div className="hidden xl:flex space-x-8 lg:space-x-12 px-20 flex-grow items-center justify-center">
+      <div className="hidden xl:flex space-x-8 lg:space-x-12 px-20 flex-grow items-center justify-center text-black">
         <Link href="/" className="py-2 hover:text-[#663d2e] font-medium">HOME</Link>
         <Link href="/about" className="py-2 hover:text-[#663d2e] font-medium">ABOUT</Link>
         <Link href="/services" className="py-2 hover:text-[#663d2e] font-medium">SERVICES</Link>
         <Link href="/speaking" className="py-2 hover:text-[#663d2e] font-medium">SPEAKING</Link>
         <Link href="/blog" className="py-2 hover:text-[#663d2e] font-medium">BLOG</Link>
         <Link href="/membership" className="py-2 hover:text-[#663d2e] font-medium">CONTACT</Link>
+      </div>
+
+      {/* New Buttons */}
+      <div className="hidden xl:flex space-x-4">
+        <Link href="/coaching-peres">
+          <button className="bg-[#0070BB] text-white px-4 py-2 rounded-full hover:bg-[#8c503e] transition duration-300 ease-in-out">
+            Coaching pour pères
+          </button>
+        </Link>
+        <Link href="/coaching-hommes">
+          <button className="bg-[#0070BB] text-white px-4 py-2 rounded-full hover:bg-[#8c503e] transition duration-300 ease-in-out">
+            Coaching de vie pour hommes
+          </button>
+        </Link>
       </div>
 
       {/* Hamburger Menu for mobile */}

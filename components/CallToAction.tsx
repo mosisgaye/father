@@ -1,7 +1,7 @@
 export default function CallToAction() {
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center bg-[#e0dbd4] py-10 px-6 md:px-16">
-      <div className="flex flex-col items-center justify-center space-y-6 md:mr-10 text-center md:text-left">
+    <div className="flex flex-col md:flex-row justify-center h-40 items-center bg-[#e0dbd4] py-10 px-6 md:px-16">
+      <div className="flex flex-col items-center justify-center space-y-6 md:mr-10 text-center md:text-left px-20">
         <h2 className="text-[#0065de] text-4xl font-bold">
           READY TO GET STARTED?
         </h2>
