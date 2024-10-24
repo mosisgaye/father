@@ -11,7 +11,7 @@ export default function Header() {
   };
 
   return (
-    <header className="top-0 z-50 bg-[#e0dbd4] text-black px-4 h-12 md:px-10 md:h-20 flex items-center justify-between">
+    <header className="sticky top-0 z-50 bg-[#e0dbd4] text-black px-4 h-12 md:px-10 md:h-20 flex items-center justify-between">
       {/* Logo */}
       <div className="flex items-center">
         <Link href="/" aria-label="Retourner à l'accueil ComparePrix">
