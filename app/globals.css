@@ -49,3 +49,14 @@ body {
   border-color: rgb(85, 85, 85);
   color: rgb(0, 0, 0);
 }
+
+.hero {
+  color: rgba(194, 133, 102, 1);
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  font-size: 46px;
+  text-align: left;
+  font-family: 'Bebas Neue';
+  font-weight: 400;
+  font-style: normal;
+}

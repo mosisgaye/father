@@ -15,7 +15,7 @@ export default function Header() {
       {/* Logo */}
       <div className="flex items-center">
         <Link href="/" aria-label="Retourner à l'accueil ComparePrix">
-          <Image className="md:w-[124px] md:h-[77px] w-[80px] h-[50px]" width={124} height={100} src="/images/logo.png" alt="Logo vaderhart" />
+          <Image className="" width={124} height={100} src="/images/logo.png" alt="Logo vaderhart" />
         </Link>
       </div>
 
