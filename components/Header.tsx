@@ -15,18 +15,21 @@ export default function Header() {
       {/* Logo */}
       <div className="flex items-center">
         <Link href="/" aria-label="Retourner à l'accueil ComparePrix">
-          <Image className="" width={124} height={100} src="/images/logo.png" alt="Logo vaderhart" />
+          <Image className="" width={130} height={124} src="/images/logo.png" alt="Logo vaderhart" />
         </Link>
       </div>
 
       {/* Navigation Links for desktop */}
       <div className="hidden xl:flex space-x-8 lg:space-x-12 px-20 flex-grow items-center justify-center">
-        <Link href="/" className="py-2 hover:text-[#663d2e] font-medium">HOME</Link>
-        <Link href="/about" className="py-2 hover:text-[#663d2e] font-medium">ABOUT</Link>
-        <Link href="/services" className="py-2 hover:text-[#663d2e] font-medium">SERVICES</Link>
-        <Link href="/speaking" className="py-2 hover:text-[#663d2e] font-medium">SPEAKING</Link>
-        <Link href="/blog" className="py-2 hover:text-[#663d2e] font-medium">BLOG</Link>
-        <Link href="/contact" className="py-2 hover:text-[#663d2e] font-medium">CONTACT</Link>
+        <Link href="/" className="py-2 hover:text-[#663d2e] font-medium">Home</Link>
+        <Link href="/about" className="py-2 hover:text-[#663d2e] font-medium">Over mij</Link>
+        <Link href="/services" className="py-2 hover:text-[#663d2e] font-medium">Diensten</Link>
+        <Link href="/speaking" className="py-2 hover:text-[#663d2e] font-medium">Getuigenissen</Link>
+        <Link href="/blog" className="py-2 hover:text-[#663d2e] font-medium">Blog</Link>
+        <Link href="/contact" className="py-2 hover:text-[#663d2e] font-medium">Contacten</Link>
+        <Link href="/agenda" className="py-2 hover:text-[#663d2e] font-medium">Activiteiten - Agenda</Link>
+        <Link href="/contact" className="py-2 hover:text-[#663d2e] font-medium">Afspraak</Link>
+
       </div>
 
       {/* Hamburger Menu for mobile */}
