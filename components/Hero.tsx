@@ -4,7 +4,7 @@ import '@/app/globals.css'
 
 const Hero: React.FC = () => {
     return (
-        <div className="flex flex-col items-center justify-center h-[60vh] bg-gradient-to-b from-[#e0dbd4] to-[#ffffff] pt-24 md:py-36">
+        <div className="flex flex-col items-center justify-center h-[60vh] bg-gradient-to-b from-[#e0dbd4] to-[#ffffff] pt-24 md:pt-24 md:px-8 ">
             <h1 className="text-4xl md:text-6xl font-bold mb-8 text-center text-[#333] transition transform duration-500 hover:scale-105">
                 In verbinding met jezelf, <br />
                 <span className="text-animation">in verbinding met je gezin</span>
