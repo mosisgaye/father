@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
         <div className="flex flex-col items-center justify-center h-[60vh] bg-gradient-to-b from-[#e0dbd4] to-[#ffffff] pt-24 md:pt-24 md:px-8 ">
             <h1 className="text-4xl md:text-6xl font-bold mb-8 text-center text-[#333] transition transform duration-500 hover:scale-105">
                 In verbinding met jezelf, <br />
-                <span className="text-animation">in verbinding met je gezin</span>
+                <span className="">in verbinding met je gezin</span>
 
             </h1>
             <div className="flex flex-col md:flex-row justify-around w-full max-w-4xl px-4">
