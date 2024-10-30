@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <header className="top-0 z-50 bg-[#e0dbd4] text-[#333] px-4 h-12 md:px-10 md:h-20 flex items-center justify-between">
       {/* Logo */}
-      <div className="flex mx-10">
+      <div className="flex">
         <Link href="/" aria-label="Retourner à l'accueil ComparePrix">
           <Image className="w-20 sm:w-28 md:w-36 lg:w-40" width={200} height={160} src="/images/logo.png" alt="Logo vaderhart" />
         </Link>
@@ -81,7 +81,7 @@ export default function Header() {
         {/* Close Button in Mobile Menu */}
         <div className="flex justify-end p-4">
           <button onClick={toggleMenu} aria-label="Fermer le menu">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 text-black">
               <path d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
