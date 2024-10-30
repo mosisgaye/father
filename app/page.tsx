@@ -13,8 +13,10 @@ export default function Home() {
       <AboutSection />
       <TestimonialSection />
       <PricingSection />
-      <CallToAction />
+      <Faq />
       <MilitaryStory />
+      <CallToAction />
+      
      
     </div>
   );

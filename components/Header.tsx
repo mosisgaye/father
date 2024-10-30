@@ -14,14 +14,14 @@ export default function Header() {
   return (
     <header className="top-0 z-50 bg-[#e0dbd4] text-[#333] px-4 h-12 md:px-10 md:h-20 flex items-center justify-between">
       {/* Logo */}
-      <div className="flex items-center">
+      <div className="flex mx-10">
         <Link href="/" aria-label="Retourner à l'accueil ComparePrix">
           <Image className="w-44 md:w-60 lg:w-48" width={200} height={160} src="/images/logo.png" alt="Logo vaderhart" />
         </Link>
       </div>
 
       {/* Navigation Links for desktop */}
-      <div className="hidden xl:flex space-x-8 lg:space-x-12 px-20 flex-grow items-center justify-center text-xl font-semibold">
+      <div className="hidden xl:flex space-x-8 lg:space-x-12 flex-grow items-center justify-center text-xl font-semibold">
         <Link href="/" className="py-2 hover:text-[#663d2e] font-medium">Home</Link>
         <Link href="/about" className="py-2 hover:text-[#663d2e] font-medium">Over mij</Link>
         <Link href="/services" className="py-2 hover:text-[#663d2e] font-medium">Diensten</Link>
@@ -52,8 +52,11 @@ export default function Header() {
             <Link href="/agenda" className="block px-4 py-2 hover:bg-[#e0dbd4]">Agenda</Link>
           </div>
         </div>
+      </div>
 
-        <Link href="/contact" className="py-2 hover:text-[#663d2e] font-medium">Contact</Link>
+      {/* Contact Button */}
+      <div className="hidden xl:block">
+        <Link href="/contact" className="py-2 px-8 mx-20 bg-[#0072ff] text-white rounded-lg hover:bg-[#005bb5] transition-all duration-200 font-semibold">Contact</Link>
       </div>
 
       {/* Hamburger Menu for mobile */}
@@ -123,7 +126,8 @@ export default function Header() {
               )}
             </div>
 
-            <Link href="/contact" className="py-2 hover:text-[#663d2e] font-medium">Contact</Link>
+            {/* Contact Button in Mobile Menu */}
+            <Link href="/contact" className="py-2 px-4 bg-[#0072ff] text-white rounded-lg font-semibold">Contact</Link>
           </nav>
         </div>
       </div>

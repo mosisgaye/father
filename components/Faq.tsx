@@ -1,60 +1,57 @@
+import React from 'react';
+
 const Faq = () => {
     const faqs = [
-      {
-        question: "Quels sont les meilleurs forfaits du moment ?",
-        answer:
-          "Le prix des abonnements et les promotions évoluent en permanence. Concernant les meilleurs forfaits mobile, ils changent chaque semaine avec des séries limitées incluant plusieurs dizaines de Giga d'internet mobile pour moins de 10€, ou encore des forfaits avec des smartphones pas chers voire même offerts.",
-      },
-      {
-        question: "Comment Ariase aide-t-il les consommateurs à choisir ?",
-        answer:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-      },
-      {
-        question: "Quels sont les principaux services proposés par Ariase ?",
-        answer:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-      },
-      {
-        question: "Combien d'économies en changeant d'opérateur ?",
-        answer:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-      },
-      {
-        question: "Ariase est-il indépendant et fiable ?",
-        answer:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-      },
+        {
+            question: "Welke diensten biedt Vaderhart aan?",
+            answer:
+                "Vaderhart biedt coachingdiensten voor mannen en vaders, met persoonlijke begeleiding om een betere verbinding met zichzelf en hun gezin te bevorderen.",
+        },
+        {
+            question: "Hoe kan Vaderhart mij helpen om een betere vader te worden?",
+            answer:
+                "Onze coaching helpt u om uw waarden en levensdoelen beter te begrijpen, zodat u gezinsbanden kunt versterken en een persoonlijk evenwicht kunt vinden dat bij u past.",
+        },
+        {
+            question: "Waarom kiezen voor Vaderhart voor levenscoaching?",
+            answer:
+                "Bij Vaderhart zetten we ons in om hoogwaardige coaching te bieden, gericht op de persoonlijke ontwikkeling van mannen, met tools en middelen die zijn afgestemd op individuele behoeften.",
+        },
+        {
+            question: "Wat zijn de kosten van de diensten van Vaderhart?",
+            answer:
+                "De tarieven voor de coachingsdiensten van Vaderhart variëren afhankelijk van de specifieke behoeften en de duur van de sessies. Neem contact met ons op voor een persoonlijke offerte.",
+        },
+        {
+            question: "Is Vaderhart gecertificeerd en betrouwbaar?",
+            answer:
+                "Vaderhart bestaat uit ervaren en gecertificeerde coaches, die zich inzetten om mannen te begeleiden bij hun persoonlijke en familiale ontwikkeling, met professionaliteit en vertrouwelijkheid.",
+        },
     ];
-  
+
     return (
-      <div className="max-w-3xl mx-auto p-6 bg-[#e0dbd4] text-[#000] rounded-lg shadow-md">
-        <h2 className="text-2xl font-semibold text-[#111] mb-6">
-          Les réponses à vos questions
-        </h2>
-        <div className="space-y-4 divide-y divide-white divide-opacity-100">
-          {faqs.map((faq, index) => (
-            <details
-              key={index}
-              className="group border-gray-300 py-4 cursor-pointer"
-              style={{
-                borderBottomWidth: 'calc(2px * var(--tw-divide-y-reverse))',
-                borderTopWidth: 'calc(2px * (1 - var(--tw-divide-y-reverse)))',
-                borderColor: 'rgb(255 255 255 / 1)', // Ajuster la transparence si nécessaire
-              }}
-            >
-              <summary className="text-lg font-medium text-[#111]">
-                {faq.question}
-              </summary>
-              <div className="transition-max-height max-h-0 overflow-hidden duration-500 ease-in-out group-open:max-h-96">
-                <p className="py-2 text-[#111]">{faq.answer}</p>
-              </div>
-            </details>
-          ))}
+        <div className="max-w-4xl mx-auto p-6 bg-gradient-to-b from-[#e0dbd4] to-[#ffffff] text-[#333] rounded-lg shadow-lg my-10 md:my-16">
+            <h2 className="text-3xl font-bold text-center mb-8 text-[#333]">
+                Antwoorden op uw vragen
+            </h2>
+            <div className="space-y-4 divide-y divide-gray-200">
+                {faqs.map((faq, index) => (
+                    <details
+                        key={index}
+                        className="group p-4 bg-white rounded-lg shadow-sm transition-transform duration-300 hover:scale-105"
+                    >
+                        <summary className="text-lg md:text-xl font-medium text-[#0065de] cursor-pointer flex justify-between items-center">
+                            {faq.question}
+                            <span className="text-[#555] group-open:rotate-180 transition-transform duration-300">▼</span>
+                        </summary>
+                        <div className="mt-3 overflow-hidden transition-max-height duration-500 ease-in-out group-open:max-h-96">
+                            <p className="pt-2 text-[#555] leading-relaxed">{faq.answer}</p>
+                        </div>
+                    </details>
+                ))}
+            </div>
         </div>
-      </div>
     );
-  };
-  
-  export default Faq;
-  
+};
+
+export default Faq;

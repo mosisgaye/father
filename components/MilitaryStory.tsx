@@ -45,9 +45,7 @@ function MilitaryStory() {
             <p className="text-xl text-left text-gray-700 leading-relaxed">
               Donec quis purus nec nisi tincidunt consectetur ut nec lectus. Proin venenatis mi at libero interdum, a consequat tortor scelerisque.
             </p>
-            <p className="text-xl text-left text-gray-700 leading-relaxed">
-              Aliquam erat volutpat. Vivamus nec neque sit amet magna sagittis euismod. Integer sit amet turpis et augue vehicula dignissim.
-            </p>
+          
           </div>
           
      
