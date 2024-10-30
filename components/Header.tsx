@@ -16,7 +16,7 @@ export default function Header() {
       {/* Logo */}
       <div className="flex mx-10">
         <Link href="/" aria-label="Retourner à l'accueil ComparePrix">
-          <Image className="w-44 md:w-60 lg:w-48" width={200} height={160} src="/images/logo.png" alt="Logo vaderhart" />
+          <Image className="w-20 sm:w-28 md:w-36 lg:w-40" width={200} height={160} src="/images/logo.png" alt="Logo vaderhart" />
         </Link>
       </div>
 
@@ -74,7 +74,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 left-0 w-full h-full bg-black text-white transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 w-full h-full bg-white text-black transform transition-transform duration-300 ease-in-out ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         } z-40 overflow-hidden`}
       >
@@ -88,12 +88,7 @@ export default function Header() {
         </div>
 
         <div className="p-6 flex flex-col items-center">
-          {/* Centered Logo */}
-          <div className="w-full flex justify-center mb-6">
-            <Link href="/" className="relative w-40" aria-label="Retourner à l'accueil ComparePrix">
-              <Image alt="Logo ComparePrix" src="/images/logo.png" width={160} height={40} />
-            </Link>
-          </div>
+         
           
           {/* Mobile Navigation Links */}
           <nav className="mt-6 flex flex-col space-y-4 text-center">
