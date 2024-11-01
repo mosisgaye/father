@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import MilitaryStory from "@/components/MilitaryStory";
 import PricingSection from "@/components/PricingSection";
 import TestimonialSection from "@/components/TestimonialSection";
+import BlogPage from "./blog/page";
 
 export default function Home() {
   return (
@@ -14,8 +15,9 @@ export default function Home() {
       <TestimonialSection />
       <PricingSection />
       <Faq />
-      <MilitaryStory />
       <CallToAction />
+      <MilitaryStory />
+      <BlogPage limit={3} />
       
      
     </div>
