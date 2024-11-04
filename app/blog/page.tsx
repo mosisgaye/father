@@ -4,17 +4,17 @@ import matter from 'gray-matter';
 import Link from 'next/link';
 import Image from 'next/image';
 
-
-// Interface voor de props definiëren
+// Interface pour les props
 interface BlogPageProps {
-  limit?: number; // De 'limit' prop is optioneel
+  limit?: number; // La prop 'limit' est optionnelle
 }
 
-export default function BlogPage({ limit }: BlogPageProps) {
-  // Gebruik van process.cwd() om ervoor te zorgen dat het pad correct is
+// Composant BlogPage
+const BlogPage: React.FC<BlogPageProps> = ({ limit = 0 }) => {
+  // Lire les fichiers dans le dossier 'posts'
   const files = fs.readdirSync(path.join(process.cwd(), 'posts'));
 
-  // Pas de limiet toe als deze is ingesteld
+  // Appliquer la limite si définie
   const limitedFiles = limit ? files.slice(0, limit) : files;
 
   const posts = limitedFiles.map((fileName) => {
@@ -33,7 +33,6 @@ export default function BlogPage({ limit }: BlogPageProps) {
 
   return (
     <div>
-      
       <div className="max-w-7xl mx-auto py-16 px-6 bg-gray-50 rounded-lg shadow-lg">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-800">
           Onze tips voor het succesvol afronden van je afstandsonderwijs
@@ -69,7 +68,7 @@ export default function BlogPage({ limit }: BlogPageProps) {
             </div>
           ))}
         </div>
-        {limit && (
+        {limit > 0 && (
           <div className="flex justify-center mt-12">
             <Link href="/blog">
               <button className="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-all duration-300">
@@ -81,4 +80,6 @@ export default function BlogPage({ limit }: BlogPageProps) {
       </div>
     </div>
   );
-}
+};
+
+export default BlogPage;
