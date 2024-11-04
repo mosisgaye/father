@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import '@/app/globals.css'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,10 +20,10 @@ export default function Header() {
   };
 
   return (
-    <header className="top-0 z-50 bg-white shadow-md text-gray-800 h-16 md:h-20 flex items-center justify-between fixed w-full px-10 lg:px-20 xl:px-32">
+    <header className="top-0 z-50 bg-white text-gray-800 h-16 md:h-20 flex items-center justify-between fixed w-full px-10 lg:px-20 xl:px-32">
       {/* Left Navigation */}
-      <nav className="hidden xl:flex items-center space-x-8 text-lg font-medium">
-        <Link href="/" className="hover:text-blue-600">Home</Link>
+      <nav className="hidden xl:flex items-center space-x-20 px-20 font-medium">
+        <Link href="/" className="hover:text-blue-600">HOME</Link>
         
         <div
           className="relative group"
@@ -30,7 +31,7 @@ export default function Header() {
           onMouseLeave={() => setIsDienstenDropdownOpen(false)}
         >
           <button className="flex items-center hover:text-blue-600">
-            Diensten
+           DIENSTEN
             <span className="ml-1 transform transition-transform duration-200">
               {isDienstenDropdownOpen ? "▲" : "▼"}
             </span>
@@ -50,7 +51,7 @@ export default function Header() {
           onMouseLeave={() => setIsAfspraakDropdownOpen(false)}
         >
           <button className="flex items-center hover:text-blue-600">
-            Afspraak
+            AFSPRAAK
             <span className="ml-1 transform transition-transform duration-200">
               {isAfspraakDropdownOpen ? "▲" : "▼"}
             </span>
@@ -78,10 +79,10 @@ export default function Header() {
       </div>
 
       {/* Right Navigation */}
-      <nav className="hidden xl:flex items-center justify-end space-x-8 text-lg font-medium">
-        <Link href="/blog" className="hover:text-blue-600">Blog</Link>
-        <Link href="/about" className="hover:text-blue-600">Over mij</Link>
-        <Link href="/contact" className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 transition">Contact</Link>
+      <nav className="hidden xl:flex items-center justify-end space-x-20 px-20 font-medium">
+        <Link href="/blog" className="hover:text-blue-600">BLOG</Link>
+        <Link href="/about" className="hover:text-blue-600">OVER MIJ</Link>
+        <Link href="/contact" className="button px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 transition">CONTACT</Link>
       </nav>
 
       {/* Mobile Menu Toggle */}
