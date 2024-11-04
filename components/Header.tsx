@@ -1,130 +1,158 @@
-'use client';
-import { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+"use client";
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isTeamDropdownOpen, setIsTeamDropdownOpen] = useState(false);
+  const [isDienstenDropdownOpen, setIsDienstenDropdownOpen] = useState(false);
+  const [isAfspraakDropdownOpen, setIsAfspraakDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setIsDienstenDropdownOpen(false);
+    setIsAfspraakDropdownOpen(false);
+  };
+
   return (
-    <header className="top-0 z-50 bg-[#e0dbd4] text-[#333] px-4 h-12 md:px-10 md:h-20 flex items-center justify-between">
-      {/* Logo */}
-      <div className="flex">
-        <Link href="/" aria-label="Retourner à l'accueil ComparePrix">
-          <Image className="w-20 sm:w-28 md:w-36 lg:w-40" width={200} height={160} src="/images/logo.png" alt="Logo vaderhart" />
+    <header className="top-0 z-50 bg-white shadow-md text-gray-800 h-16 md:h-20 flex items-center justify-between fixed w-full px-10 lg:px-20 xl:px-32">
+      {/* Left Navigation */}
+      <nav className="hidden xl:flex items-center space-x-8 text-lg font-medium">
+        <Link href="/" className="hover:text-blue-600">Home</Link>
+        
+        <div
+          className="relative group"
+          onMouseEnter={() => setIsDienstenDropdownOpen(true)}
+          onMouseLeave={() => setIsDienstenDropdownOpen(false)}
+        >
+          <button className="flex items-center hover:text-blue-600">
+            Diensten
+            <span className="ml-1 transform transition-transform duration-200">
+              {isDienstenDropdownOpen ? "▲" : "▼"}
+            </span>
+          </button>
+          {isDienstenDropdownOpen && (
+            <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2">
+              <Link href="/Coaching" className="block px-4 py-2 hover:bg-gray-100">Coaching</Link>
+              <Link href="/Groepsbijeenkomsten" className="block px-4 py-2 hover:bg-gray-100">Groepsbijeenkomsten</Link>
+              <Link href="/Trainingen en webinars" className="block px-4 py-2 hover:bg-gray-100">Trainingen en webinars</Link>
+            </div>
+          )}
+        </div>
+
+        <div
+          className="relative group"
+          onMouseEnter={() => setIsAfspraakDropdownOpen(true)}
+          onMouseLeave={() => setIsAfspraakDropdownOpen(false)}
+        >
+          <button className="flex items-center hover:text-blue-600">
+            Afspraak
+            <span className="ml-1 transform transition-transform duration-200">
+              {isAfspraakDropdownOpen ? "▲" : "▼"}
+            </span>
+          </button>
+          {isAfspraakDropdownOpen && (
+            <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2">
+              <Link href="/afspraak" className="block px-4 py-2 hover:bg-gray-100">Afspraak</Link>
+              <Link href="/agenda" className="block px-4 py-2 hover:bg-gray-100">Agenda</Link>
+            </div>
+          )}
+        </div>
+      </nav>
+
+      {/* Centered Logo */}
+      <div className="flex items-center justify-center">
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/images/logo.png"
+            alt="Logo vaderhart"
+            width={150}
+            height={50}
+            className="w-24 sm:w-32"
+          />
         </Link>
       </div>
 
-      {/* Navigation Links for desktop */}
-      <div className="hidden xl:flex space-x-8 lg:space-x-12 flex-grow items-center justify-center text-xl font-semibold">
-        <Link href="/" className="py-2 hover:text-[#663d2e] font-medium">Home</Link>
-        <Link href="/about" className="py-2 hover:text-[#663d2e] font-medium">Over mij</Link>
-        <Link href="/services" className="py-2 hover:text-[#663d2e] font-medium">Diensten</Link>
-        <Link href="/blog" className="py-2 hover:text-[#663d2e] font-medium">Blog</Link>
+      {/* Right Navigation */}
+      <nav className="hidden xl:flex items-center justify-end space-x-8 text-lg font-medium">
+        <Link href="/blog" className="hover:text-blue-600">Blog</Link>
+        <Link href="/about" className="hover:text-blue-600">Over mij</Link>
+        <Link href="/contact" className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 transition">Contact</Link>
+      </nav>
 
-        {/* Team dropdown menu for desktop */}
-        <div 
-          className="relative group" 
-          onMouseEnter={() => setIsTeamDropdownOpen(true)}
-          onMouseLeave={() => setIsTeamDropdownOpen(false)}
-        >
-          <button className="flex items-center py-2 hover:text-[#663d2e] font-medium">
-           Afspraak
-            <span className="ml-1 transition-transform duration-300 transform">
-              {isTeamDropdownOpen ? (
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 8l-6 6h12l-6-6z" />
-                </svg>
-              ) : (
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 16l6-6H6l6 6z" />
-                </svg>
-              )}
-            </span>
-          </button>
-          <div className={`absolute top-full mt-2 bg-white shadow-lg rounded-md text-black w-40 transition-transform duration-300 ease-out transform origin-top ${isTeamDropdownOpen ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0'}`}>
-            <Link href="/afspraak" className="block px-4 py-2 hover:bg-[#e0dbd4]">Afspraak</Link>
-            <Link href="/agenda" className="block px-4 py-2 hover:bg-[#e0dbd4]">Agenda</Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Contact Button */}
-      <div className="hidden xl:block">
-        <Link href="/contact" className="py-2 px-8 mx-20 bg-[#0072ff] text-white rounded-lg hover:bg-[#005bb5] transition-all duration-200 font-semibold">Contact</Link>
-      </div>
-
-      {/* Hamburger Menu for mobile */}
-      <button className="xl:hidden ml-2" onClick={toggleMenu} aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}>
-        {!isMenuOpen ? (
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 text-white">
-            <path d="M5 17h14M5 12h14M5 7h14" />
+      {/* Mobile Menu Toggle */}
+      <button className="xl:hidden" onClick={toggleMenu} aria-label="Toggle Menu">
+        {isMenuOpen ? (
+          <svg className="w-8 h-8 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M6 18L18 6M6 6l12 12" />
           </svg>
         ) : (
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 text-white">
-            <path d="M6 18L18 6M6 6l12 12" />
+          <svg className="w-8 h-8 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         )}
       </button>
 
       {/* Mobile Menu */}
-      <div
-        className={`fixed top-0 left-0 w-full h-full bg-white text-black transform transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        } z-40 overflow-hidden`}
-      >
-        {/* Close Button in Mobile Menu */}
+      <div className={`fixed inset-0 z-40 bg-white text-gray-800 transform ${isMenuOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 xl:hidden`}>
         <div className="flex justify-end p-4">
-          <button onClick={toggleMenu} aria-label="Fermer le menu">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 text-black">
+          <button onClick={toggleMenu} aria-label="Close Menu">
+            <svg className="w-8 h-8 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
+        
+        <nav className="flex flex-col items-center text-center space-y-4 mt-8">
+          <Link href="/" onClick={closeMenu} className="hover:text-blue-600">Home</Link>
 
-        <div className="p-6 flex flex-col items-center">
-         
-          
-          {/* Mobile Navigation Links */}
-          <nav className="mt-6 flex flex-col space-y-4 text-center">
-            <Link href="/" className="py-2 hover:text-[#663d2e] font-medium">Home</Link>
-            <Link href="/about" className="py-2 hover:text-[#663d2e] font-medium">Over mij</Link>
-            <Link href="/services" className="py-2 hover:text-[#663d2e] font-medium">Diensten</Link>
-            <Link href="/blog" className="py-2 hover:text-[#663d2e] font-medium">Blog</Link>
-            
-            {/* Team Dropdown in Mobile */}
-            <div className="relative w-full">
-              <button onClick={() => setIsTeamDropdownOpen(!isTeamDropdownOpen)} className="flex items-center justify-center py-2 font-medium hover:text-[#663d2e]">
-               Afspraak
-                <span className="ml-1 transition-transform duration-300 transform">
-                  {isTeamDropdownOpen ? (
-                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 8l-6 6h12l-6-6z" />
-                    </svg>
-                  ) : (
-                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 16l6-6H6l6 6z" />
-                    </svg>
-                  )}
-                </span>
-              </button>
-              {isTeamDropdownOpen && (
-                <div className="flex flex-col items-center space-y-2 bg-[#e0dbd4] rounded-md text-black mt-2 px-4 py-2">
-                  <Link href="/afspraak" className="hover:bg-[#e0dbd4] w-full text-center">Afspraak</Link>
-                  <Link href="/agenda" className="hover:bg-[#e0dbd4] w-full text-center">Agenda</Link>
-                </div>
-              )}
-            </div>
+          {/* Diensten Dropdown in Mobile */}
+          <div className="w-full text-center">
+            <button
+              onClick={() => setIsDienstenDropdownOpen(!isDienstenDropdownOpen)}
+              className="flex justify-center items-center w-full py-2 font-medium hover:text-blue-600"
+            >
+              Diensten
+              <span className="ml-2">
+                {isDienstenDropdownOpen ? "▲" : "▼"}
+              </span>
+            </button>
+            {isDienstenDropdownOpen && (
+              <div className="bg-gray-50 rounded-md shadow-md py-2">
+                <Link href="/Coaching" onClick={closeMenu} className="block px-4 py-2 hover:bg-gray-200">Coaching</Link>
+                <Link href="/Groepsbijeenkomsten" onClick={closeMenu} className="block px-4 py-2 hover:bg-gray-200">Groepsbijeenkomsten</Link>
+                <Link href="/Trainingen en webinars" onClick={closeMenu} className="block px-4 py-2 hover:bg-gray-200">Trainingen en webinars</Link>
+              </div>
+            )}
+          </div>
 
-            {/* Contact Button in Mobile Menu */}
-            <Link href="/contact" className="py-2 px-4 bg-[#0072ff] text-white rounded-lg font-semibold">Contact</Link>
-          </nav>
-        </div>
+          {/* Afspraak Dropdown in Mobile */}
+          <div className="w-full text-center">
+            <button
+              onClick={() => setIsAfspraakDropdownOpen(!isAfspraakDropdownOpen)}
+              className="flex justify-center items-center w-full py-2 font-medium hover:text-blue-600"
+            >
+              Afspraak
+              <span className="ml-2">
+                {isAfspraakDropdownOpen ? "▲" : "▼"}
+              </span>
+            </button>
+            {isAfspraakDropdownOpen && (
+              <div className="bg-gray-50 rounded-md shadow-md py-2">
+                <Link href="/afspraak" onClick={closeMenu} className="block px-4 py-2 hover:bg-gray-200">Afspraak</Link>
+                <Link href="/agenda" onClick={closeMenu} className="block px-4 py-2 hover:bg-gray-200">Agenda</Link>
+              </div>
+            )}
+          </div>
+
+          <Link href="/blog" onClick={closeMenu} className="hover:text-blue-600">Blog</Link>
+          <Link href="/about" onClick={closeMenu} className="hover:text-blue-600">Over mij</Link>
+          <Link href="/contact" onClick={closeMenu} className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 transition">Contact</Link>
+        </nav>
       </div>
     </header>
   );
