@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import '@/app/globals.css'
 
 function AboutSection() {
   return (
