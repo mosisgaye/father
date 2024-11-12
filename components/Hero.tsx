@@ -14,13 +14,13 @@ const Hero: React.FC = () => {
             </h1>
             
             <div className="flex flex-col md:flex-row justify-around items-center w-full max-w-3xl space-y-6 md:space-y-0 md:space-x-8 mt-4">
-                <div className="flex flex-col items-center transition-transform duration-300 hover:scale-105">
-                    <img src="/images/vader.svg" alt="Vaderschapscoach" className="w-20 h-20 md:w-28 md:h-28 mb-3"/>
-                    <h2 className="text-lg md:text-xl font-semibold text-white  text-center">Mental health coach</h2>
+                <div className="flex flex-col items-center transition-transform duration-300 hover:scale-105 cursor-pointer">
+                    <img src="/images/vader.svg" alt="Vaderschapscoach" className="w-40 h-40 md:w-28 md:h-28 mb-3"/>
+                    <h2 className="text-lg md:text-xl font-semibold text-white  text-center">Algemene coaching</h2>
                 </div>
-                <div className="flex flex-col items-center transition-transform duration-300 hover:scale-105">
-                    <img src="/images/Vadermetkind.svg" alt="Life Coach voor Mannen" className="w-20 h-20 md:w-28 md:h-28 mb-3"/>
-                    <h2 className="text-lg md:text-xl font-semibold text-white text-center">vaderschapschoach</h2>
+                <div className="flex flex-col items-center transition-transform duration-300 hover:scale-105 cursor-pointer">
+                    <img src="/images/Vadermetkind.svg" alt="Life Coach voor Mannen" className="w-40 h-40 md:w-28 md:h-28 mb-3"/>
+                    <h2 className="text-lg md:text-xl font-semibold text-white text-center">Vaderschapschoach</h2>
                 </div>
             </div>
             
@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
                 href="#contact"
                 className="mt-8 px-6 py-3 md:px-8 md:py-3 text-sm md:text-base text-white bg-[#0065de] rounded-lg shadow-lg hover:bg-[#0056b3] transition-colors duration-300"
             >
-                Contact
+                Maak een afspraak
             </a>
 
             <div className="absolute bottom-8">

@@ -37,7 +37,7 @@ export default function Header() {
             </span>
           </button>
           {isDienstenDropdownOpen && (
-            <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2">
+            <div className="absolute top-full left-0 mt-2 w-64 bg-white shadow-lg rounded-md py-2">
               <Link href="/Coaching" className="block px-4 py-2 hover:bg-gray-100">Coaching</Link>
               <Link href="/Groepsbijeenkomsten" className="block px-4 py-2 hover:bg-gray-100">Groepsbijeenkomsten</Link>
               <Link href="/Trainingen en webinars" className="block px-4 py-2 hover:bg-gray-100">Trainingen en webinars</Link>
@@ -58,7 +58,7 @@ export default function Header() {
           </button>
           {isAfspraakDropdownOpen && (
             <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2">
-              <Link href="/afspraak" className="block px-4 py-2 hover:bg-gray-100">Afspraak</Link>
+              <Link href="/afspraak" className="block px-4 py-2 hover:bg-gray-100">Appointment</Link>
               <Link href="/agenda" className="block px-4 py-2 hover:bg-gray-100">Agenda</Link>
             </div>
           )}
@@ -144,7 +144,7 @@ export default function Header() {
             </button>
             {isAfspraakDropdownOpen && (
               <div className="bg-gray-50 rounded-md shadow-md py-2">
-                <Link href="/afspraak" onClick={closeMenu} className="block px-4 py-2 hover:bg-gray-200">Afspraak</Link>
+                <Link href="/afspraak" onClick={closeMenu} className="block px-4 py-2 hover:bg-gray-200">Appointment</Link>
                 <Link href="/agenda" onClick={closeMenu} className="block px-4 py-2 hover:bg-gray-200">Agenda</Link>
               </div>
             )}
