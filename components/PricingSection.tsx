@@ -24,8 +24,8 @@ function PricingSection() {
               <li className="flex justify-center items-center">✔︎ Aangepaste opvolging</li>
             </ul>
             <div className="text-center">
-              <button className="bg-[#b5885c] text-white py-2 px-6 rounded-full hover:bg-[#5f3b2f] transition-colors duration-300">
-                Boeken
+              <button className="bg-yellow-400 text-black py-3 px-6 rounded-lg shadow-md hover:bg-gray-200 transition">
+              Kies dit pakket
               </button>
             </div>
           </div>
@@ -50,7 +50,7 @@ function PricingSection() {
               <li className="flex justify-center items-center">✔︎ Flexibel en aangepast</li>
             </ul>
             <div className="text-center">
-              <button className="bg-[#b5885c] text-white py-2 px-6 rounded-full hover:bg-[#5f3b2f] transition-colors duration-300">
+              <button className="bg-yellow-400 text-black py-3 px-6 rounded-lg shadow-md hover:bg-gray-200 transition">
                 Kies dit pakket
               </button>
             </div>
@@ -76,7 +76,7 @@ function PricingSection() {
               <li className="flex justify-center items-center">✔︎ Langdurige betrokkenheid</li>
             </ul>
             <div className="text-center">
-              <button className="bg-[#b5885c] text-white py-2 px-6 rounded-full hover:bg-[#5f3b2f] transition-colors duration-300">
+              <button className="bg-yellow-400 text-black py-3 px-6 rounded-lg shadow-md hover:bg-gray-200 transition">
                 Kies dit pakket
               </button>
             </div>

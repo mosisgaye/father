@@ -1,3 +1,4 @@
+import Aboutme from "@/components/Aboutme";
 import AboutSection from "@/components/AboutSection";
 import CallToAction from "@/components/CallToAction";
 import Faq from "@/components/Faq";
@@ -13,6 +14,7 @@ export default function Home() {
       <AboutSection />
       <TestimonialSection />
       <PricingSection />
+      <Aboutme />
       <Faq />
       <CallToAction />
       <MilitaryStory />
