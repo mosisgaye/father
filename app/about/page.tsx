@@ -41,7 +41,7 @@ const About: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-gray-700 text-lg italic leading-relaxed max-w-2xl mx-auto"
+          className="text-gray-700 italic text-xl leading-relaxed max-w-2xl mx-auto"
         >
           Als vader van twee jonge kinderen, als zoon, als echtgenoot en als
           leerkracht heb ik reeds de verschillende rollen die een man aanneemt,
@@ -97,7 +97,7 @@ const About: React.FC = () => {
                 Pedagogische bekwaamheid als leerkracht secundair onderwijs
               </li>
               <li>Master Rechten en International Development</li>
-              <li>Carrière van ruim 10 jaar in het onderwijs</li>
+              <li>Carrière van ruim 10 jaar in het onderwijs onderwijs (leerkracht islamitische godsdienst)</li>
             </ul>
           </motion.div>
           <motion.div
