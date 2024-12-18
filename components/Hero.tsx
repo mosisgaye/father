@@ -8,20 +8,20 @@ const Hero: React.FC = () => {
             className="flex flex-col items-center justify-center h-[100vh] md:h-[100vh] bg-cover bg-center pt-20 px-4 md:pt-24 md:px-8 bg-opacity-70"
             style={{ backgroundImage: "url('/images/banner.jpg')" }}
         >
-            <h1 className="text-3xl md:text-5xl font-semibold mb-6 md:mb-8 text-center text-white transition-transform duration-500 hover:scale-105 leading-snug">
-                In verbinding met jezelf, <br />
-                <span>in verbinding met je gezin</span>
+            <h1 className="text-3xl md:text-5xl font-semibold mb-6 md:mb-8 text-center text-black transition-transform duration-500 hover:scale-105 leading-snug">
+                In verbinding met jezelf, 
             </h1>
             
             <div className="flex flex-col md:flex-row justify-around items-center w-full max-w-3xl space-y-6 md:space-y-0 md:space-x-8 mt-4">
-                <div className="flex flex-col items-center transition-transform duration-300 hover:scale-105 cursor-pointer">
-                    <img src="/images/vader.svg" alt="Vaderschapscoach" className="w-40 h-40 md:w-28 md:h-28 mb-3"/>
-                    <h2 className="text-lg md:text-xl font-semibold text-white  text-center">Algemene coaching</h2>
-                </div>
-                <div className="flex flex-col items-center transition-transform duration-300 hover:scale-105 cursor-pointer">
+            <div className="flex flex-col items-center transition-transform duration-300 hover:scale-105 cursor-pointer">
                     <img src="/images/Vadermetkind.svg" alt="Life Coach voor Mannen" className="w-40 h-40 md:w-28 md:h-28 mb-3"/>
                     <h2 className="text-lg md:text-xl font-semibold text-white text-center">Vaderschapschoach</h2>
                 </div>
+                <div className="flex flex-col items-center transition-transform duration-300 hover:scale-105 cursor-pointer">
+                    <img src="/images/vader.svg" alt="Vaderschapscoach" className="w-40 h-40 md:w-28 md:h-28 mb-3"/>
+                    <h2 className="text-lg md:text-xl font-semibold text-white  text-center">Mental health coach</h2>
+                </div>
+              
             </div>
             
             <blockquote className="mt-8 md:mt-10 text-base md:text-lg italic text-center text-white px-4 md:px-0 max-w-2xl">

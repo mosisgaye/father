@@ -1,52 +1,43 @@
 import Image from 'next/image';
-import '@/app/globals.css'
+import '@/app/globals.css';
 
 function AboutSection() {
   return (
-    <section className="bg-[#ffffff] py-16 flex flex-col items-center justify-center">
-      <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-start justify-between">
+    <section className="bg-[#f9f9f9] py-20 flex flex-col items-center">
+      <div className="container mx-auto max-w-5xl px-6 sm:px-8">
+        <div className="text-center mb-12">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
+            Ben je op zoek naar balans in je leven? 
+          </h1>
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Als vader of als man? Of je nu vader bent of (nog) geen kinderen hebt, je vraagt je misschien af: Hoe blijf ik mezelf trouw in een wereld vol verwachtingen, in een snelheidsmaatschappij waar we het altijd druk hebben?
+          </p>
+        </div>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Texte à gauche */}
-          <div className="md:w-3/5 mb-8 md:mb-0"> {/* Reduced width */}
-            <h2 className="text-3xl font-bold mb-4 text-left text-[#5f3b2f] uppercase">
-              Lorem Ipsum Dolor Sit Amet
-            </h2>
-            {/* Horizontal line with exact thickness and color */}
-            <hr className="border-t-4 border-[#b5885c] w-24 mb-6" />
-            <p className="text-xl mb-6 text-left text-gray-700 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
+          <div className="md:w-2/3">
+            <p className="text-gray-600 leading-relaxed mb-6">
+              Als mannencoach én vaderschapscoach ben ik er voor jou. Voor vaders die zoeken naar verbinding in hun gezin, én voor mannen die op zoek zijn naar mentale balans, persoonlijke groei en veerkracht.
             </p>
-            <p className="text-xl mb-6 text-left text-gray-700 leading-relaxed">
-              Fusce ac nisi eu magna tincidunt fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
+            <ul className="list-disc list-inside text-gray-600 mb-6">
+              <li><strong>Persoonlijke groei:</strong> Samen kijken we naar wie je bent en wie je wilt zijn, als vader en als individu.</li>
+              <li><strong>Holistische aanpak:</strong> We werken aan alle dimensies die belangrijk zijn voor jouw welzijn, want alles hangt met elkaar samen.</li>
+              <li><strong>Praktische tools:</strong> Handvatten die je dagelijks kunt inzetten om sterker in het leven te staan.</li>
+            </ul>
+            <p className="text-gray-600 leading-relaxed">
+              Coaching biedt een veilige plek om stil te staan, inzicht te krijgen en stappen te zetten. Neem contact op en ontdek wat Vaderhart voor jou kan betekenen.
             </p>
-            <p className="text-xl text-left text-gray-700 leading-relaxed">
-              Donec quis purus nec nisi tincidunt consectetur ut nec lectus. Proin venenatis mi at libero interdum, a consequat tortor scelerisque.
-            </p>
-            <p className="text-xl text-left text-gray-700 leading-relaxed">
-              Aliquam erat volutpat. Vivamus nec neque sit amet magna sagittis euismod. Integer sit amet turpis et augue vehicula dignissim.
-            </p>
-
-            <p className="text-xl mb-6 text-left text-gray-700 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
-            </p>
-            <p className="text-xl mb-6 text-left text-gray-700 leading-relaxed">
-              Fusce ac nisi eu magna tincidunt fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
-            </p>
-            <p className="text-xl text-left text-gray-700 leading-relaxed">
-              Donec quis purus nec nisi tincidunt consectetur ut nec lectus. Proin venenatis mi at libero interdum, a consequat tortor scelerisque.
-            </p>
-       
           </div>
-          
+
           {/* Image à droite */}
-          <div className="md:w-1/3 flex justify-center md:justify-end md:ml-2"> {/* Reduced left margin */}
-            <div className="rounded-md overflow-hidden shadow-md">
+          <div className="md:w-1/3 flex justify-center">
+            <div className="rounded-xl overflow-hidden shadow-lg">
               <Image
                 src="/images/about.jpeg" // Replace this with the correct image path
                 alt="Profile Picture"
-                width={400}
-                height={600}
-                className="rounded-md object-cover"
+                width={500}
+                height={700}
+                className="rounded-xl object-cover"
               />
             </div>
           </div>
