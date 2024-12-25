@@ -14,12 +14,10 @@ export default function Home() {
       <AboutSection />
       <TestimonialSection />
       <PricingSection />
-      <Aboutme />
+      <MilitaryStory />
       <Faq />
       <CallToAction />
-      <MilitaryStory />
       
-     
     </div>
   );
 }

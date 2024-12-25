@@ -18,7 +18,7 @@ function MilitaryStory() {
           <div className="md:w-1/3 flex justify-center">
             <div className="rounded-xl overflow-hidden shadow-lg">
               <Image
-                src="/images/about.jpeg" // Remplace ce chemin par le bon chemin de l'image
+                src="/images/illias.jpg" // Remplace ce chemin par le bon chemin de l'image
                 alt="Profile Picture"
                 width={500}
                 height={700}

@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
             style={{ backgroundImage: "url('/images/banner.jpg')" }}
         >
             <h1 className="text-3xl md:text-5xl font-semibold mb-6 md:mb-8 text-center text-black transition-transform duration-500 hover:scale-105 leading-snug">
-                In verbinding met jezelf, 
+            In verbinding met jezelf, in verbinding met je gezin
             </h1>
             
             <div className="flex flex-col md:flex-row justify-around items-center w-full max-w-3xl space-y-6 md:space-y-0 md:space-x-8 mt-4">
@@ -24,9 +24,7 @@ const Hero: React.FC = () => {
               
             </div>
             
-            <blockquote className="mt-8 md:mt-10 text-base md:text-lg italic text-center text-white px-4 md:px-0 max-w-2xl">
-                "Verbinding met jezelf, verbinding met je gezin."
-            </blockquote>
+       
             
             <a
                 href="#contact"
@@ -35,10 +33,6 @@ const Hero: React.FC = () => {
                 Maak een afspraak
             </a>
 
-            <div className="absolute bottom-8">
-                <span className="text-sm text-white italic">or scroll to learn more</span>
-                <div className="text-white mt-2 animate-bounce">&#x25BC;</div>
-  </div>
         </div>
     );
 };
