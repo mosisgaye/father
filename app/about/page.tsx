@@ -59,25 +59,33 @@ const About: React.FC = () => {
               <div className="h-[600px] pr-4">
                 <div className="space-y-6 text-gray-700 italic">
                   <p className="leading-relaxed">
-                    Als vader van twee jonge kinderen, als zoon, als echtgenoot en als
-                    leerkracht heb ik reeds de verschillende rollen die een man aanneemt,
-                    mogen ervaren...
+                    Als vader van twee jonge kinderen, als zoon, als echtgenoot
+                    en als leerkracht heb ik reeds de verschillende rollen die
+                    een man aanneemt, mogen ervaren...
                   </p>
                   <p className="leading-relaxed">
-                    De belangrijkste referentie die ik kan voorleggen, is in de eerste
-                    plaats mijn eigen persoonlijke zoektocht van meer dan 10 jaar in het
-                    willen begrijpen van mentaal welzijn en het verband met de vroege
-                    kindertijd...
+                    De belangrijkste referentie die ik kan voorleggen, is in de
+                    eerste plaats mijn eigen persoonlijke zoektocht van meer dan
+                    10 jaar in het willen begrijpen van mentaal welzijn en het
+                    verband met de vroege kindertijd...
                   </p>
                   <p className="leading-relaxed">
-                    Immers: 'Je kan niet gidsen als je er niet bent geweest.' Onderweg
-                    verdiepte ik mij in diverse onderwerpen zoals mannenwerk, complex
-                    trauma, hartritme-coherentie, de polyvagaaltheorie...
+                    Immers: 'Je kan niet gidsen als je er niet bent geweest.'
+                    Onderweg verdiepte ik mij in diverse onderwerpen zoals
+                    mannenwerk, complex trauma, hartritme-coherentie, de
+                    polyvagaaltheorie...
                   </p>
                   <p className="leading-relaxed">
-                    Als overtuigd moslim draag ik mijn islamitische identiteit openlijk
-                    uit, maar wil mijn boodschap toegankelijk en beschikbaar maken voor
-                    elke vader, jongen of man die op zoek is naar zichzelf...
+                    Als overtuigd moslim draag ik mijn islamitische identiteit
+                    openlijk uit, maar wil mijn boodschap toegankelijk en
+                    beschikbaar maken voor elke vader, jongen of man die op zoek
+                    is naar zichzelf, Ik probeer ook vaak linken te leggen met
+                    spirituele boodschappen aangezien dit volgens mij voor
+                    verdieping en verbinding kan zorgen. In essentie richt de
+                    kern van mijn begeleiding zich er op om mannen hun
+                    authentieke zelf te helpen vinden. <span className="font-bold">Het gaat om het leren
+                    kijken naar de binnenwereld in een wereld waar de buitenkant
+                    zo belangrijk lijkt.</span>
                   </p>
                 </div>
               </div>
@@ -110,7 +118,9 @@ const About: React.FC = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#5f3b2f]" />
-                  <span>Pedagogische bekwaamheid als leerkracht secundair onderwijs</span>
+                  <span>
+                    Pedagogische bekwaamheid als leerkracht secundair onderwijs
+                  </span>
                 </li>
               </ul>
             </Card>
@@ -130,7 +140,9 @@ const About: React.FC = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#5f3b2f]" />
-                  <span>Samen veerkrachtig: de (on)zin van de eerste 1000 dagen</span>
+                  <span>
+                    Samen veerkrachtig: de (on)zin van de eerste 1000 dagen
+                  </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#5f3b2f]" />
